@@ -1,5 +1,5 @@
+import java.math.BigInteger;
 import java.util.*; 
-import java.math.BigInteger; 
 class dsaAlg { 
 final static BigInteger one = new BigInteger("1"); 
 final static BigInteger zero = new BigInteger("0"); 
@@ -33,19 +33,13 @@ BigInteger h = new BigInteger(p.bitLength(), r);
 h = h.mod(p); 
 return h.modPow((p.subtract(one)).divide(q), p); 
 } 
-public 
-static 
-java.lang.Exception 
+public static void main (String[] args)throws java.lang.Exception 
 { 
-void main 
 Random randObj = new Random(); 
-(String[] args) 
-throws 
 BigInteger p = getNextPrime("10600"); 
 BigInteger q = findQ(p.subtract(one)); 
 BigInteger g = getGen(p,q,randObj); 
-System.out.println(" \n simulation of Digital Signature 
-Algorithm \n"); 
+System.out.println(" \n simulation of Digital Signature Algorithm \n"); 
 System.out.println(" \n global public key components are:\n"); 
 System.out.println("\np is: " + p); 
 System.out.println("\nq is: " + q); 
